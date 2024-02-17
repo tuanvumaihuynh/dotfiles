@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Fail on any command.
 set -eux pipefail
@@ -8,9 +8,10 @@ set -eux pipefail
 (cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-autosuggestions)
 
 sudo cp zsh/.zshrc ~
+cp -r zsh/*.zsh ~/.oh-my-zsh/custom/
 
 # Color Theme
-dconf load /org/gnome/terminal/legacy/profiles:/:fb358fc9-49ea-4252-ad34-1d25c649e633/ < profiles/jetbrain_profile.dconf
+dconf load /org/gnome/terminal/legacy/profiles:/:fb358fc9-49ea-4252-ad34-1d25c649e633/ < profiles/my_profile.dconf
 
 # Add it to the default list in the terminal
 add_list_id=fb358fc9-49ea-4252-ad34-1d25c649e633

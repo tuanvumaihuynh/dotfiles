@@ -1,8 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 
 # Fail on any command.
 set -eux pipefail
-
 
 # Install Patched Font
 mkdir ~/.fonts

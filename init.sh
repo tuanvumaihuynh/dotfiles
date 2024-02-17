@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Fail on any command.
 set -eux pipefail
@@ -28,20 +28,20 @@ sudo apt install apt-transport-https
 sudo apt update
 sudo apt install -y code
 
-
 # TablePlus
 wget -qO - https://deb.tableplus.com/apt.tableplus.com.gpg.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/tableplus-archive.gpg > /dev/null
 sudo add-apt-repository "deb [arch=amd64] https://deb.tableplus.com/debian/22 tableplus main"
 sudo apt update
 sudo apt install -y tableplus
 
-
 # Tmux
 sudo apt install -y tmux
-
 
 # Zsh
 sudo apt install -y zsh
 
 # Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Ibus
+sudo apt-get install ibus-unikey
